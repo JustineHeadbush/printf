@@ -13,7 +13,7 @@ typedef struct spec
 
 void my_char(va_list forms);
 void my_int(va_list forms);
-void my_percent(void);
+void my_percent();
 void my_string(va_list forms);
 void my_decimal(va_list forms);
 int _printf(const char *format, ...);
