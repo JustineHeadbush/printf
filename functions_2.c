@@ -29,7 +29,7 @@ void my_string(va_list forms)
  * Return: 0
  */
 
-void my_percent(void)
+void my_percent()
 {
 	char perc = '%';
 
