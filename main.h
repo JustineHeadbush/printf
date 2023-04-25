@@ -3,7 +3,9 @@
 
 #include <stdarg.h>
 #include <unistd.h>
-#include <stdio.h>
+#include <stdlib.h>
+
+#define UNUSED(x)(void)(x)
 
 typedef struct spec
 {
@@ -13,7 +15,7 @@ typedef struct spec
 
 void my_char(va_list forms);
 void my_int(va_list forms);
-void my_percent();
+void my_percent(va_list forms);
 void my_string(va_list forms);
 void my_decimal(va_list forms);
 int _printf(const char *format, ...);

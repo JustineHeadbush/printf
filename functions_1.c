@@ -1,6 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <unistd.h>
 /**
  * my_char - prints a character
  * @forms: variable argument list
@@ -19,7 +17,7 @@ void my_decimal(va_list forms)
 {
 	int deci = va_arg(forms, int);
 
-	char buff[15];
+	char buff[50];
 	int index = 0;
 
 	if (deci == 0)
@@ -55,7 +53,7 @@ void my_int(va_list forms)
 	int in = va_arg(forms, int);
 
 	int index = 0;
-	char buff[15];
+	char buff[50];
 
 	if (in < 0)
 	{

@@ -1,7 +1,4 @@
 #include "main.h"
-#include <stdarg.h>
-#include <string.h>
-#include <unistd.h>
 
 /**
  * my_string - prints a string
@@ -10,28 +7,22 @@
 
 void my_string(va_list forms)
 {
-	char *stringy = va_arg(forms, char *);
+	char *stringy = va_arg(forms, char*);
+	int index = 0;
 
-	if (stringy == NULL)
+	while (stringy[index] != '\0')
 	{
-		const char *string_null = "nil";
-
-		write(STDOUT_FILENO, string_null, strlen(string_null));
+		index++;
 	}
-	else
-	{
-		write(STDOUT_FILENO, stringy, strlen(stringy));
-	}
+	write(STDOUT_FILENO, stringy, index);
 }
 
 /**
- * my_percent - functions that prints % sign
- * Return: 0
+ * my_percent - prints the % sign
+ * @forms: argument list
  */
-
-void my_percent()
+void my_percent(va_list forms)
 {
-	char perc = '%';
-
-	write(STDOUT_FILENO, &perc, 1);
+	UNUSED(forms);
+	write(1, "%%", 1);
 }
