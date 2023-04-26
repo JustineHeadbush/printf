@@ -18,7 +18,7 @@ int _printf(const char *format, ...)
 
 	spec_t specs[] = {
 		{"c", my_char},
-		{"d", my_decimal},
+		{"d", my_int},
 		{"%", my_percent},
 		{"s", my_string},
 		{"i", my_int},

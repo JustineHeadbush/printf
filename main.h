@@ -17,7 +17,6 @@ void my_char(va_list forms);
 void my_int(va_list forms);
 void my_percent(va_list forms);
 void my_string(va_list forms);
-void my_decimal(va_list forms);
 int _printf(const char *format, ...);
 
 #endif
